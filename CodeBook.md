@@ -20,7 +20,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 
 **For the raw data, the units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2) and the gyroscope units are rad/seg. However, all of the features/measurements are normalized and bounded within [-1,1], thus eliminating the unit of measure.**
 
-**For more information see the "README.txt" and "features_info.txt" files that accompany the raw data.** 
+For more information see the "README.txt" and "features_info.txt" files that accompany the raw data (from the link above) or see the website where the data was obtained: <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones> 
 
 ##Creating the Tidy Dataset##
 The "run_analysis.R" script starts with the raw files downloaded form the link above and outputs the tidy dataset. The high-level transformation from raw to tidy data is as follows:
