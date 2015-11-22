@@ -43,7 +43,7 @@ In both "train" and "test" sets:
 - '../subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.  Dimensions are 7352x1.  
 
 ###Script "run_analysis.R" Processing###
-The rest of this file will follow the five step procecss in the "run_analysis.R" script and describe the variables and their transformations.   
+The rest of this file will describe the procecssing performed in the "run_analysis.R" script.
 
 ###Step 1###
 The data is divided into two sets: "train" and "test" and should be visible as folders in your working directory. Within each of those folders, there are three files that need to be merged first. Let's begin with "train":
