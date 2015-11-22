@@ -32,8 +32,7 @@ dataset<-rbind(mergetrain,mergetest)
 
 #Step2
 #Cast class of dataset to a data.table for easier manipulation
-#Need to have data.table and dplyr packages installed and loaded.
-#dplyr package used to extract columns via select() for "mean" and "std"
+#Need to have data.table and dplyr packages installed and loaded if not already.
 install.packages(c("data.table","dplyr"))
 library(data.table);library(dplyr)
 DT<-data.table(dataset)
@@ -49,20 +48,14 @@ subset2<-rename(subset.merge, activity=description)
 
 #Step4
 #Rename variables with better description
-#The names are pretty descriptive already. I will remove "()" characters and
-#standardize the spelling of Mean. The "-" separates the variable from the
-#measurement and the measurement form the direction. General variable name
-#formatting is "variable-measurement-direction" except for angle variables
-#which consist soley of the variable name.
+#The names are pretty descriptive already. I will remove "()" characters and standardize the spelling of mean and std.
 names(subset2)<-gsub("mean()","Mean",names(subset2),fixed=TRUE)
 names(subset2)<-gsub("mean","Mean",names(subset2),fixed=TRUE)
 names(subset2)<-gsub("std()","StD",names(subset2),fixed=TRUE)
 
 #Step5
 #Need to group the subset by activity and subject
-#then find the mean of each column in the dataset
-#One way of doing it is: gsubset<-subset2%>%group_by(activity,subject)%>%summarize_each(funs(mean))
-#The way I chose is:
+#There are many ways to do it. The way I chose is:
 subset2<-data.table(subset2)
 gsubset<-subset2[, lapply(.SD,mean), by=list(activity,subject)]
 colnames(gsubset)[3:68] <- paste("Mean(", colnames(gsubset)[3:68],")", sep = "")
