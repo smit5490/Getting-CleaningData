@@ -141,10 +141,10 @@ The formatting of the variables has been standardized. All variables are encapul
 * Unit of Measure: N/A
 
 ###Mean(tBodyAcc-Mean-X)###
-*Description: The mean of the mean body acceleration in the x-direction for each subject, activity pair. Recorded in the time domain.
-Class: Number
-Values: [0.2216,0.3015]
-Unit of Measure: N/A - Normalized variable
+* Description: The mean of the mean body acceleration in the x-direction for each subject, activity pair. Recorded in the time domain.
+* Class: Number
+* Values: [0.2216,0.3015]
+* Unit of Measure: N/A - Normalized variable
 
 ###Mean(tBodyAcc-Mean-Y)###
 * Description: The mean of the mean body acceleration in the y-direction for each subject, activity pair. Recorded in the time domain.
