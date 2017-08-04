@@ -1,8 +1,3 @@
----
-title: "README.md"
-output: html_document
----
-
 ##Introduction
 This repository is concerned with getting and cleaning data related to accelerometer and gyroscopic information collected on 30 persons performing 6 physical activities. This document is meant to describe the contents of the repository and the algorithm used to generate a tidy data set as required in the Getting & Cleaning Data Project on Coursera. The raw data can be found at: <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>.
 
